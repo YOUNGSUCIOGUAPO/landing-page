@@ -31,11 +31,6 @@ export default function Home() {
     <Nav />
     <Hero />
     <TodaySection />
-    {/* <Card /> */}
-    <LikeButton />
-    <div className='bg-black'>
-    <CardLikeButton />
-    </div>
     </main>
   );
 }

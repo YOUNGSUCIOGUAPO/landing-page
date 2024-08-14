@@ -29,7 +29,7 @@ const TodaySection = () => {
 
   const handleScrollRight = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollLeft += 250; // Adjust to card width + margin
+      carouselRef.current.scrollLeft += 300; // Adjust to card width + margin
     }
   };
 
@@ -74,8 +74,12 @@ const TodaySection = () => {
             </div>
           ))}
         </div>
-        
       </div>
+          <div className='flex justify-center items-center'>
+          <button className='mt-[60px] bg-[#DB4444] w-[234px] h-[56px] rounded-[4px] text-white flex justify-center align-middle items-center'>
+          View All Products
+        </button>
+          </div>
     </section>
   );
 };

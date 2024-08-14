@@ -1,7 +1,11 @@
 import Image from 'next/image'
 import React from 'react'
 import fill_eye from '/public/assets/Fill Eye.svg'
-import cardImage1 from '/public/assets/card-image2.svg'
+import cardImage1 from '/public/assets/card-image1.svg'
+import cardImage2 from '/public/assets/card-image2.svg'
+import cardImage3 from '/public/assets/card-image1.svg'
+import cardImage4 from '/public/assets/card-image1.svg'
+
 import StarRating from './StarRating'
 import CardLikeButton from './CardLikeButton'
 
