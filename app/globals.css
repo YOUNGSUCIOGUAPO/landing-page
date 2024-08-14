@@ -8,22 +8,17 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: white;
 }
 
 @layer utilities {
@@ -31,3 +26,96 @@ body {
     text-wrap: balance;
   }
 }
+
+.card-image {
+  background-color:#F5F5F5;
+  width: 270px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image .discount-rect {
+  position: absolute;
+  width: 55px;
+  height: 26px;
+  background-color: #DB4444;
+  border-radius: 4px;
+  color: white;
+  font-size: 12px;
+  font-weight: 400;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Vertically center the text */
+  text-align: center;
+}
+
+.card-image .card-icons {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  top:12px;
+  left: 224px;
+  width: 34px;
+  height: 76px;
+}
+
+.card-image .image-container {
+  width: 190px;
+  height: 180px;
+  position: absolute;
+  top: 35px;
+  left: 40px;
+}
+
+.card-text .card-title {
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.card-text .price {
+  color: #DB4444;
+  font-weight: 500;
+  font-size: 16px;
+  margin-right: 12px;
+}
+
+.card-text .old-price {
+  color: black;
+  opacity: 50%;
+  font-size: 16px;
+  text-decoration: line-through;
+}
+
+.add-to-cart {
+  position: absolute;
+  bottom: -41px; /* Initially position below the card-image */
+  left: 0;
+  right: 0;
+  height: 41px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  border-radius: 0 0 4px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect to slide up the add-to-cart button */
+.card-image:hover .add-to-cart {
+  bottom: 0; /* Slide up into view */
+  opacity: 1;
+}
+/* .card-image .icon-holder {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid black;
+} */
+
