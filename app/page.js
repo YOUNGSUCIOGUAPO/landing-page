@@ -1,5 +1,6 @@
 import Card from "@/components/Card";
 import CardLikeButton from "@/components/CardLikeButton";
+import ControlledCarousel from "@/components/ControlledCarousel";
 import CountdownTimer from "@/components/CountdownTimer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -18,7 +19,7 @@ const poppins = Poppins({
 
 export default function Home() {
   return (
-    <main className={poppins.className}>
+    <main className={`${poppins.className}`}>
     <Head>
         <title>My Website</title>
         <link
@@ -28,9 +29,11 @@ export default function Home() {
         <meta name="description" content="This is a description of my website." />
       </Head>
     <Header className={poppins.className}/>
-    <Nav />
-    <Hero />
-    <TodaySection />
+    <div className="">
+      <Nav />
+      <Hero />
+      <TodaySection />
+    </div>
     </main>
   );
 }

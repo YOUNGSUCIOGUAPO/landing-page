@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -16,16 +17,24 @@
   }
 } */
 
+
 body {
   color: rgb(var(--foreground-rgb));
   background: white;
 }
+
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
+
+.no-padding {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
 
 .card-image {
   background-color:#F5F5F5;
@@ -118,4 +127,5 @@ body {
   border-radius: 50%;
   border: 1px solid black;
 } */
+
 

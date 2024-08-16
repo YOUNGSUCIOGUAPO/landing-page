@@ -1,5 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.css'
-import BootstrapClient from '@/components/BootstrapClient';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Inter } from "next/font/google";
 import Head from 'next/head'
 import Script from 'next/script'
@@ -16,12 +15,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous"
+      />
       </Head>
       <Script src="https://kit.fontawesome.com/e04ed0b4fb.js" crossorigin="anonymous"></Script>
 
-      <body className={inter.className}>
+      <body className={`${inter.className} overflow-x-hidden`}>
         {children}
-        <BootstrapClient />
       </body>
     </html>
   );

@@ -23,7 +23,7 @@ const TodaySection = () => {
 
   const handleScrollLeft = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollLeft -= 270; // Adjust to card width + margin
+      carouselRef.current.scrollLeft -= 300; // Adjust to card width + margin
     }
   };
 
@@ -34,20 +34,21 @@ const TodaySection = () => {
   };
 
   return (
-    <section className='mt-[140px] w-full h-[493px] ml-[125px]'>
-      <div className='flex'>
+    <section id='todaySection' className='mt-[140px] w-full h-[493px]'>
+      <div className='flex px-[5%]'>
         <div className='w-[20px] h-[40px] bg-[#DB4444] rounded-[4px]'></div>
         <h4 className={`${poppins.className} ml-[16px] align-content-center text-[#DB4444] text-[16px]`}>
             Todays
         </h4>
       </div>
-      <div className='flex'>
+      <div className='flex px-[5%]'>
         <h2 className={`${inter.className} text-[36px] mt-[24px] mr-[87px]`}>
           Flash Sales
         </h2>
         <CountdownTimer />
 
-        <button onClick={handleScrollLeft} className='absolute left-0 z-10 p-2 border-2'>
+        <div className='ml-auto'>
+        <button onClick={handleScrollLeft} className=''>
           <Image
             src={LeftArrow}
             width={46}
@@ -55,8 +56,7 @@ const TodaySection = () => {
             alt=''
             /> {/* Left arrow */}
         </button>
-
-        <button onClick={handleScrollRight} className='absolute right-0 z-10 p-2 border-2'>
+        <button onClick={handleScrollRight} className=''>
           <Image
           src={RightArrow}
           width={46}
@@ -64,10 +64,11 @@ const TodaySection = () => {
           alt=''
           /> {/* Right arrow */}
         </button>
+        </div>
       </div>
+
       <div className='relative'>
-        
-        <div ref={carouselRef} className='carousel flex scroll-smooth overflow-hidden'>
+        <div ref={carouselRef} id='todayCarousel' className='carousel flex scroll-smooth overflow-hidden pl-[5%]'>
           {itemData && itemData.map((item, index) => (
             <div key={index} className='flex-shrink-0'>
               <Card product={item} />
@@ -75,11 +76,11 @@ const TodaySection = () => {
           ))}
         </div>
       </div>
-          <div className='flex justify-center items-center'>
-          <button className='mt-[60px] bg-[#DB4444] w-[234px] h-[56px] rounded-[4px] text-white flex justify-center align-middle items-center'>
+      <div className='flex justify-center items-center'>
+        <button className='mt-[60px] bg-[#DB4444] w-[234px] h-[56px] rounded-[4px] text-white flex justify-center align-middle items-center'>
           View All Products
         </button>
-          </div>
+      </div>
     </section>
   );
 };
