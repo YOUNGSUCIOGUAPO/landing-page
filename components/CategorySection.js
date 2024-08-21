@@ -1,25 +1,25 @@
 'use client'
 import React, { useRef } from 'react';
 import { Poppins, Inter } from 'next/font/google';
-import CountdownTimer from './CountdownTimer';
-import { itemData } from '@/constants/itemData';
-import Card from './Card';
 import Image from 'next/image';
+import Card from './Card';
+import { iconData } from '@/constants/itemData';
 import RightArrow from '/public/assets/Right-Arrow.svg'
 import LeftArrow from '/public/assets/Left-Arrow.svg'
+import IconCard from './IconCard';
 
 const poppins = Poppins({
-  subsets: ['latin'],
-  weight: '600',
-});
+    subsets: ['latin'],
+    weight: '600',
+  });
+  
+  const inter = Inter({
+    subsets: ['latin'],
+    weight: '600',
+  });
 
-const inter = Inter({
-  subsets: ['latin'],
-  weight: '600',
-});
-
-const TodaySection = () => {
-  const carouselRef = useRef(null);
+const CategorySection = () => {
+    const carouselRef = useRef(null);
 
   const handleScrollLeft = () => {
     if (carouselRef.current) {
@@ -32,20 +32,18 @@ const TodaySection = () => {
       carouselRef.current.scrollLeft += 300; // Adjust to card width + margin
     }
   };
-
   return (
-    <section id='todaySection' className='mt-[140px] w-full'>
-      <div className='flex px-[5%]'>
+    <section className='categorySection mt-[80px]'>
+        <div className='flex px-[5%]'>
         <div className='w-[20px] h-[40px] bg-[#DB4444] rounded-[4px]'></div>
         <h4 className={`${poppins.className} ml-[16px] align-content-center text-[#DB4444] text-[16px]`}>
-            Todays
+            Categories
         </h4>
       </div>
-      <div className='flex px-[5%] mb-[40px]'>
+      <div className='flex px-[5%] mb-[60px]'>
         <h2 className={`${inter.className} text-[36px] mt-[24px] mr-[87px]`}>
-          Flash Sales
+          Browse By Categories
         </h2>
-        <CountdownTimer />
 
         <div className='ml-auto'>
         <button onClick={handleScrollLeft} className=''>
@@ -66,29 +64,23 @@ const TodaySection = () => {
         </button>
         </div>
       </div>
-
       <div className='relative'>
-        <div ref={carouselRef} id='todayCarousel' className='carousel flex scroll-smooth overflow-hidden pl-[5%]'>
-          {itemData && itemData.map((item, index) => (
+        <div ref={carouselRef} id='categoryCarousel' className='carousel flex scroll-smooth overflow-hidden pl-[5%]'>
+          {iconData && iconData.map((item, index) => (
             <div key={index} className='flex-shrink-0'>
-              <Card product={item} />
+              <IconCard icon={item} />
             </div>
           ))}
         </div>
       </div>
-      <div className='flex justify-center items-center'>
-        <button className='my-[60px] bg-[#DB4444] w-[234px] h-[56px] rounded-[4px] text-white flex justify-center align-middle items-center'>
-          View All Products
-        </button>
-      </div>
       <div className='px-[5%]'>
       <div
-        className="border-b border-black  opacity-30"
+        className="border-b border-black opacity-30 mb-[70px]"
         style={{ borderWidth: '0.5px' }}
       ></div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default TodaySection;
+export default CategorySection

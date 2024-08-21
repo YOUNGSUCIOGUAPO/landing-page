@@ -128,4 +128,78 @@ body {
   border: 1px solid black;
 } */
 
+.icon-card {
+  width: 9.31rem; /* Scaled width */
+  height: 7.88rem; /* Scaled height */
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem; /* Example padding */
+  /* transition: all 0.3s ease; */
+  
+}
 
+/* .icon-card:hover {
+  background-color: #DB4444;
+  color: white;
+}
+
+.icon-card:hover .icon {
+  fill: white;
+  color: white;
+}
+
+.icon {
+  fill: white;
+}
+
+.icon-card .icon-text {
+  margin-top: 0.875rem;
+} */
+
+.icon-card .icon {
+  filter: none; /* Default icon color */
+  transition: filter 0.3s ease;
+}
+
+.icon-card .icon-text {
+  color: #000000; /* Text in black */
+  transition: color 0.3s ease;
+}
+
+.icon-card:hover {
+  background-color: #DB4444; /* Background color on hover */
+}
+
+.icon-card:hover .icon {
+  filter: brightness(0) invert(1); /* Invert icon to white on hover */
+}
+
+.icon-card:hover .icon-text {
+  color: #ffffff; /* Text turns white on hover */
+}
+
+.billboard-container {
+  height: 486px;
+  width: 1134px;
+  /* border: 2px dashed green; */
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 100px;
+  background-image: url('/assets/speaker.svg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.billboard-container .overlay-content {
+  position: absolute;
+  top: 265.2px;
+  left: 52px;
+}

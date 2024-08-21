@@ -1,14 +1,19 @@
 import Card from "@/components/Card";
 import CardLikeButton from "@/components/CardLikeButton";
+import CategorySection from "@/components/CategorySection";
 import ControlledCarousel from "@/components/ControlledCarousel";
 import CountdownTimer from "@/components/CountdownTimer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import IconCard from "@/components/IconCard";
 import LikeButton from "@/components/LikeButton";
 import Nav from "@/components/Nav";
 import TodaySection from "@/components/TodaySection";
 import { Poppins } from 'next/font/google';
 import Head from 'next/head';
+import phone from '/public/assets/CellPhone-icon.svg'
+import BestSellingSection from "@/components/BestSellingSection";
+import BillboardSection from "@/components/BillboardSection";
 
 
 const poppins = Poppins({
@@ -33,6 +38,9 @@ export default function Home() {
       <Nav />
       <Hero />
       <TodaySection />
+      <CategorySection />
+      <BestSellingSection />
+      <BillboardSection />
     </div>
     </main>
   );

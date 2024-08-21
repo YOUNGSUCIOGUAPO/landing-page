@@ -7,11 +7,14 @@ import StarRating from './StarRating'
 import CardLikeButton from './CardLikeButton'
 
 const Card = ({product}) => {
-
+  console.log('ITEM-PRODUCT',product)
   return (
     <div className='w-[270px] h-[350px] flex flex-col mr-[30px]'>
       <div className='card-image mb-[16px] relative rounded-[4px]'>
-        <div className='discount-rect'>{product.discountedPercent}</div>
+         {/* Conditional rendering of the discount rectangle */}
+         {product.discountedPercent ? (
+          <div className='discount-rect'>{product.discountedPercent}</div>
+        ) : null}
         <div className='card-icons gap-[8px] absolute top-[12px] right-[12px] flex'>
           <CardLikeButton />
           <Image src={fill_eye} width={34} height={34} alt='' />
