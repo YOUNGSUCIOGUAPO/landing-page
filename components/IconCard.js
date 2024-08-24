@@ -3,15 +3,14 @@ import React from 'react'
 import phone from '/public/assets/CellPhone-icon.svg'
 import computer from '/public/assets/Computer-icon.svg'
 
-const IconCard = ({ icon}) => {
-  console.log('PRODUCT', icon);
+const IconCard = ({icon}) => {
   return (
-    <div className='icon-card mr-[45px] mb-[70px]'>
+    <div className='icon-card mr-[55px] mb-[70px]'>
       <div className='icon-container icon'>
         <Image
         src={icon.icon}
-        width={49}
-        height={49}
+        width='3.5rem'
+        height='3.5rem'
         className='icon'
         alt=''
         />

@@ -68,7 +68,7 @@ const TodaySection = () => {
       </div>
 
       <div className='relative'>
-        <div ref={carouselRef} id='todayCarousel' className='carousel flex scroll-smooth overflow-hidden pl-[5%]'>
+        <div ref={carouselRef} id='productCarousel' className='carousel flex scroll-smooth overflow-hidden pl-[5%] gap-10'>
           {itemData && itemData.map((item, index) => (
             <div key={index} className='flex-shrink-0'>
               <Card product={item} />

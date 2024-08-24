@@ -7,10 +7,16 @@ const Nav = () => {
   return (
     <>
     <CustomHead />
-    <nav className='h-[94px] px-[5%]'>
-        <div className="container mx-auto flex items-center h-full w-full pt-[47px]">
-        <h1 className="text-xl font-bold">Exclusive</h1>
-        <ul className="flex space-x-[3rem] pl-[12rem]">
+    <nav className='h-[94px] '>
+        <div className=" flex items-center h-full w-full pt-[47px] px-[5%]">
+        <Image
+        src={'./assets/ExclusiveLogoBlack.svg'}
+        width={118}
+        height={24}
+        alt=''
+        className=''
+        />
+        <ul className="flex space-x-[3rem] ml-[12rem] mr-[9.25rem]">
           <li><a href="#" className="hover:underline">Home</a></li>
           <li><a href="#" className="hover:underline">Contact</a></li>
           <li><a href="#" className="hover:underline">About</a></li>
@@ -18,26 +24,38 @@ const Nav = () => {
         </ul>
 
         <div className=' flex ml-auto'>
-        <div className='relative rounded-sm text-black w-[243px] h-[38px] bg-[#F5F5F5]'>
+        <div className='flex text-black w-[243px] h-[38px] bg-[#F5F5F5] rounded mr-[24px]'>
           <input
             type="text"
             placeholder="What are you looking for?"
-            className="text-black opacity-50 bg-[#f5f5f5] text-[12px] py-[10px] pl-[20px] pr-[30px]"
+            className="text-black opacity-50 bg-[#f5f5f5] text-[12px] font-[400] w-[156px] ml-[20px] mr-[34px]"
           />
-          <span className='absolute my-[7px] mr-[2px]'>
+          {/* <span className='absolute my-[7px] mr-[2px]'>
             <i class="fa-solid text-black fa-magnifying-glass text-[20px]"></i>
-         </span>
+         </span> */}
+          <Image
+            src={'./assets/Search-Vector.svg'}
+            width={24}
+            height={24}
+            alt=''
+          />
         </div>
-        {/* <i className="fa-regular fa-heart text-[32px] mx-[10px]"></i> */}
-        <LikeButton size='20px' className='ml-[24px] mr-[15px]' />
+        <LikeButton size='29px' className=' mr-[16px]' />
         <Image src={Cart}
         height={32}
         width={32}
         alt='' />
 
         </div>
-        
       </div>
+      <Image
+      src={'./assets/Line-3.svg'}
+      width={100}
+      height={0}
+      alt=''
+      className='w-full'
+
+      />
     </nav>
     </>
   )

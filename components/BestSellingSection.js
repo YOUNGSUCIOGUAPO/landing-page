@@ -18,7 +18,7 @@ const BestSellingSection = () => {
 
   return (
     <section id='todaySection' className='mt-[140px] w-full'>
-      <div className='flex px-[5%] border-2 border-black'>
+      <div className='flex px-[5%]'>
         <div className='w-[20px] h-[40px] bg-[#DB4444] rounded-[4px]'></div>
         <h4 className={`${poppins.className} ml-[16px] align-content-center text-[#DB4444] text-[16px]`}>
             This Month
@@ -36,7 +36,7 @@ const BestSellingSection = () => {
       </div>
 
       <div className='relative'>
-        <div id='bestSellingCard' className='carousel flex scroll-smooth overflow-hidden pl-[5%] mb-[140px]'>
+        <div id='bestSellingCard' className='carousel flex scroll-smooth overflow-hidden px-[5%] mb-[140px] gap-[4.5rem]'>
           {bestSellingData && bestSellingData.map((item, index) => (
             <div key={index} className='flex-shrink-0'>
               <Card product={item} />

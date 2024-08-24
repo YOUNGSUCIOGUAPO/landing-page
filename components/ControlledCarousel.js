@@ -13,13 +13,14 @@ const ControlledCarousel = () => {
   };
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect}>
-      <Carousel.Item>
+    <Carousel activeIndex={index} onSelect={handleSelect} className='w-full'>
+      <Carousel.Item className=''>
         <Image
           src={HeroImage1}
           width={882}
           height={344}
           alt="First slide"
+          className='w-full'
         />
         <Carousel.Caption>
           <h3>Iphone 14 pro on Discount now</h3>
@@ -31,6 +32,7 @@ const ControlledCarousel = () => {
           width={882}
           height={344}
           alt="Second slide"
+          className='w-full'
         />
         <Carousel.Caption>
           <h3>Iphone 15 pro max is now restocked!</h3>
@@ -42,6 +44,7 @@ const ControlledCarousel = () => {
           width={882}
           height={344}
           alt="Third slide"
+          className='w-full'
         />
         <Carousel.Caption>
           <h3>Pre-order the Iphone 16 series</h3>

@@ -141,6 +141,110 @@ export const itemData = [
         productRating: '4',
         reviews: '(98)'
     },
+    {
+        title: 'HAVIT HV-G92 Gamepad',
+        price: '$120',
+        oldPrice: '$160',
+        discountedPercent: '-40%',
+        image: cardImage1,
+        link: '',
+        productRating: '5',
+        reviews: '(88)'
+    },
+    {
+        title: 'AK-900 Wired Keyboard',
+        price: '$960',
+        oldPrice: '$1160',
+        discountedPercent: '-35%',
+        image: cardImage2,
+        link: '',
+        productRating: '4',
+        reviews: '(75)'
+    },
+    {
+        title: 'IPS LCD Gaming Monitor',
+        price: '$370',
+        oldPrice: '$400',
+        discountedPercent: '-30%',
+        image: cardImage3,
+        discount: '',
+        link: '',
+        productRating: '3',
+        reviews: '(99)'
+    },
+    {
+        title: 'S-Series Comfort Chair ',
+        price: '$375',
+        oldPrice: '$400',
+        discountedPercent: '-25%',
+        image: cardImage4,
+        discount: '',
+        link: '',
+        productRating: '4',
+        reviews: '(98)'
+    },
+    {
+        title: 'HAVIT HV-G92 Gamepad',
+        price: '$120',
+        oldPrice: '$160',
+        discountedPercent: '-40%',
+        image: cardImage1,
+        link: '',
+        productRating: '5',
+        reviews: '(88)'
+    },
+    {
+        title: 'AK-900 Wired Keyboard',
+        price: '$960',
+        oldPrice: '$1160',
+        discountedPercent: '-35%',
+        image: cardImage2,
+        link: '',
+        productRating: '4',
+        reviews: '(75)'
+    },
+    {
+        title: 'IPS LCD Gaming Monitor',
+        price: '$370',
+        oldPrice: '$400',
+        discountedPercent: '-30%',
+        image: cardImage3,
+        discount: '',
+        link: '',
+        productRating: '3',
+        reviews: '(99)'
+    },
+    {
+        title: 'S-Series Comfort Chair ',
+        price: '$375',
+        oldPrice: '$400',
+        discountedPercent: '-25%',
+        image: cardImage4,
+        discount: '',
+        link: '',
+        productRating: '4',
+        reviews: '(98)'
+    },
+    {
+        title: 'HAVIT HV-G92 Gamepad',
+        price: '$120',
+        oldPrice: '$160',
+        discountedPercent: '-40%',
+        image: cardImage1,
+        link: '',
+        productRating: '5',
+        reviews: '(88)'
+    },
+    {
+        title: 'AK-900 Wired Keyboard',
+        price: '$960',
+        oldPrice: '$1160',
+        discountedPercent: '-35%',
+        image: cardImage2,
+        link: '',
+        productRating: '4',
+        reviews: '(75)'
+    },
 ]
 
 export const iconData = [

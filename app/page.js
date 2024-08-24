@@ -14,6 +14,9 @@ import Head from 'next/head';
 import phone from '/public/assets/CellPhone-icon.svg'
 import BestSellingSection from "@/components/BestSellingSection";
 import BillboardSection from "@/components/BillboardSection";
+import ProductSection from "@/components/ProductSection";
+import FeaturedSection from "@/components/FeaturedSection";
+import Footer from "@/components/Footer";
 
 
 const poppins = Poppins({
@@ -41,6 +44,9 @@ export default function Home() {
       <CategorySection />
       <BestSellingSection />
       <BillboardSection />
+      <ProductSection />
+      <FeaturedSection />
+      <Footer />
     </div>
     </main>
   );

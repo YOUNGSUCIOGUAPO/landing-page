@@ -9,7 +9,7 @@ import CardLikeButton from './CardLikeButton'
 const Card = ({product}) => {
   console.log('ITEM-PRODUCT',product)
   return (
-    <div className='w-[270px] h-[350px] flex flex-col mr-[30px]'>
+    <div className='w-[270px] h-[350px] flex flex-col'>
       <div className='card-image mb-[16px] relative rounded-[4px]'>
          {/* Conditional rendering of the discount rectangle */}
          {product.discountedPercent ? (
