@@ -45,7 +45,7 @@ const CategorySection = () => {
           Browse By Categories
         </h2>
 
-        <div className='ml-auto'>
+        <div className='ml-auto space-x-2'>
         <button onClick={handleScrollLeft} className=''>
           <Image
             src={LeftArrow}
@@ -75,7 +75,7 @@ const CategorySection = () => {
       </div>
       <div className='px-[5%]'>
       <div
-        className="border-b border-black opacity-30 mb-[70px]"
+        className="border-b border-black opacity-30"
         style={{ borderWidth: '0.5px' }}
       ></div>
       </div>

@@ -83,8 +83,8 @@ const FeaturedSection = () => {
             className='mb-[24px]'
             />
 
-            <h3 className='mb-[8px]'>FREE AND FAST DELIVERY</h3>
-            <p>Free delivery for all orders over $140</p>
+            <h3 className='mb-[8px] text-[20px] font-[600]'>FREE AND FAST DELIVERY</h3>
+            <p className='text-[14px]'>Free delivery for all orders over $140</p>
         </div>
         <div className='flex flex-col justify-center items-center'>
             <Image
@@ -95,8 +95,8 @@ const FeaturedSection = () => {
             className='mb-[24px]'
             />
 
-            <h3 className='mb-[8px]'>FREE AND FAST DELIVERY</h3>
-            <p>Free delivery for all orders over $140</p>
+            <h3 className='mb-[8px] text-[20px] font-[600]'>24/7 CUSTOMER SERVICE</h3>
+            <p className='text-[14px]'>Friendly 24/7 customer support</p>
         </div>
         <div className='flex flex-col justify-center items-center'>
             <Image
@@ -107,8 +107,8 @@ const FeaturedSection = () => {
             className='mb-[24px]'
             />
 
-            <h3 className='mb-[8px]'>FREE AND FAST DELIVERY</h3>
-            <p>Free delivery for all orders over $140</p>
+            <h3 className='mb-[8px] text-[20px] font-[600]'>MONEY BACK GUARANTEE</h3>
+            <p className='text-[14px]'>We return money within 30 days</p>
         </div>
       </div>
     </section>

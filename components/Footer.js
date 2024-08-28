@@ -16,19 +16,18 @@ const Footer = () => {
                 <h3 className='text-[20px] font-[500] my-[24px] text-[#FAFAFA]'>Subscribe</h3>
                 <h5 className='text-[16px] font-[400] mb-[16px] text-[#FAFAFA]'>Get 10% off your first order</h5>
                 {/* input bar */}
-                <div className='relative rounded-sm text-[#FAFAFA] w-[217px] h-[48px] bg-black border-[1.5px] border-[#FAFAFA]'>
+                <div className=' rounded-sm text-[#FAFAFA] h-[48px] w-[217px] bg-black border-[1.5px] border-[#FAFAFA] '>
                 <input
                     type="text"
                     placeholder="Enter your email"
-                    className="text-[#FAFAFA] opacity-40 bg-black text-[12px] py-[10px] pl-[20px] pr-[30px]"
+                    className="text-[#FAFAFA] ml-4 mr-8 text-[16px] w-[130px] opacity-40 bg-black py-[10px]"
                 />
-                <span className='absolute my-[7px] mr-[2px]'>
+                <span className='absolute py-[12px] mr-[2px]'>
                     <Image
                     src={'./assets/icon-send.svg'}
                     width={20}
                     height={18}
                     alt=''
-                    className='mt-[3px] mr-[2px]'
                     />
                 </span>
                 </div>

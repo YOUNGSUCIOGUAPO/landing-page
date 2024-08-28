@@ -17,14 +17,14 @@ const inter = Inter({
 const BestSellingSection = () => {
 
   return (
-    <section id='todaySection' className='mt-[140px] w-full'>
+    <section id='todaySection' className='mt-[70px] w-full'>
       <div className='flex px-[5%]'>
         <div className='w-[20px] h-[40px] bg-[#DB4444] rounded-[4px]'></div>
         <h4 className={`${poppins.className} ml-[16px] align-content-center text-[#DB4444] text-[16px]`}>
             This Month
         </h4>
       </div>
-      <div className='flex px-[5%] mb-[40px]'>
+      <div className='flex items-end px-[5%] mb-[40px]'>
         <h2 className={`${inter.className} text-[36px] mt-[24px] mr-[87px]`}>
           Best Selling Products
         </h2>

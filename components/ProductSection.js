@@ -1,5 +1,5 @@
 'use client'
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Poppins, Inter } from 'next/font/google';
 import { itemData } from '@/constants/itemData';
 import Card from './Card';
@@ -17,10 +17,13 @@ const inter = Inter({
   weight: '600',
 });
 
+
+
 const ProductSection = () => {
   const carouselRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fade, setFade] = useState(false);
+  const [products, setProducts] = useState([]);
 
   const cardsPerSet = 8; // 4 cards per row * 2 rows
   const totalCards = itemData.length;
@@ -46,6 +49,31 @@ const ProductSection = () => {
     }
   };
 
+  
+
+
+  // useEffect(() => {
+  //   fetch('https://fakestoreapi.com/products?limit=12')
+  //           .then(res=>res.json())
+  //           .then(json=>console.log(json))
+  //           .then((json)=>setProducts(json))
+  // })
+
+  useEffect(() => {
+    fetch('https://fakestoreapi.com/products?limit=12')
+      .then(res => res.json())
+      .then(json => {
+        if (Array.isArray(json)) {
+          setProducts(json);
+        } else {
+          console.error('Unexpected data format', json);
+        }
+      })
+      .catch(error => console.error('Error fetching products:', error));
+  }, []);
+
+
+
   return (
     <section id='todaySection' className='mt-[140px] w-full'>
       <div className='flex px-[5%]'>
@@ -58,7 +86,7 @@ const ProductSection = () => {
         <h2 className={`${inter.className} text-[36px] mt-[24px] mr-[87px]`}>
           Explore Our Products
         </h2>
-        <div className='ml-auto'>
+        <div className='ml-auto space-x-2'>
           <button onClick={handleScrollLeft} disabled={currentIndex === 0}>
             <Image
               src={LeftArrow}
@@ -90,10 +118,19 @@ const ProductSection = () => {
         </div>
       </div>
 
+
       <div className='flex justify-center items-center'>
         <button className='my-[60px] bg-[#DB4444] w-[234px] h-[56px] mb-[140px] rounded-[4px] text-white flex justify-center align-middle items-center'>
           View All Products
         </button>
+      </div>
+
+      <div className='grid grid-cols-4 gap-2 px-[5%] '>
+        {Array.isArray(products) && products.map((product) => (
+          <div key={product.id} className=' w-full'>
+          <Card product={product.id} />
+          </div>
+        ))}
       </div>
     </section>
   );

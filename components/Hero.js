@@ -7,9 +7,9 @@ const Hero = () => {
   return (
     <section className="flex items-start px-[5%]">
       {/* Left Section: Links */}
-      <div className="flex flex-col space-y-2 w-[217px] h-[344px] mt-[40px] mr-[16px]">
-        <div className='flex'>
-          <a href="#" className="hover:underline mr-[51px]">{`Women's Fashion`}</a>
+      <div className="flex flex-col flex-nowrap space-y-4 w-[217px] h-[344px] mt-[40px] mr-[16px] text-base">
+        <div className='flex justify-between'>
+          <a href="#" className="hover:underline flex-nowrap">{`Women's Fashion`}</a>
           <Image
           src={'./assets/DropDown.svg'}
           width={24}
@@ -17,8 +17,8 @@ const Hero = () => {
           alt=''
           />
         </div>
-        <div className='flex'>
-          <a href="#" className="hover:underline mr-[80px]">{`Men's Fashion`}</a>
+        <div className='flex justify-between'>
+          <a href="#" className="hover:underline ">{`Men's Fashion`}</a>
           <Image
           src={'./assets/DropDown.svg'}
           width={24}
@@ -28,7 +28,7 @@ const Hero = () => {
         </div>
         <a href="#" className="hover:underline">Electronics</a>
         <a href="#" className="hover:underline">Home & Kitchen</a>
-        <a href="#" className="hover:underline">Beauty & Personal Care</a>
+        <a href="#" className="hover:underline">Medicine</a>
         <a href="#" className="hover:underline">Sports & Outdoors</a>
         <a href="#" className="hover:underline">Toys & Games</a>
         <a href="#" className="hover:underline">Automotive</a>

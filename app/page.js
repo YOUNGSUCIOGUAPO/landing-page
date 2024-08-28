@@ -9,15 +9,14 @@ import IconCard from "@/components/IconCard";
 import LikeButton from "@/components/LikeButton";
 import Nav from "@/components/Nav";
 import TodaySection from "@/components/TodaySection";
-import { Poppins } from 'next/font/google';
 import Head from 'next/head';
+import { Poppins } from 'next/font/google';
 import phone from '/public/assets/CellPhone-icon.svg'
 import BestSellingSection from "@/components/BestSellingSection";
 import BillboardSection from "@/components/BillboardSection";
 import ProductSection from "@/components/ProductSection";
 import FeaturedSection from "@/components/FeaturedSection";
 import Footer from "@/components/Footer";
-
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -36,9 +35,7 @@ export default function Home() {
         />
         <meta name="description" content="This is a description of my website." />
       </Head>
-    <Header className={poppins.className}/>
     <div className="">
-      <Nav />
       <Hero />
       <TodaySection />
       <CategorySection />
@@ -46,7 +43,6 @@ export default function Home() {
       <BillboardSection />
       <ProductSection />
       <FeaturedSection />
-      <Footer />
     </div>
     </main>
   );

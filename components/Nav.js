@@ -6,9 +6,9 @@ import LikeButton from './LikeButton';
 const Nav = () => {
   return (
     <>
-    <CustomHead />
-    <nav className='h-[94px] '>
-        <div className=" flex items-center h-full w-full pt-[47px] px-[5%]">
+    {/* <CustomHead /> */}
+    <nav className='h-[94px] pt-10 '>
+        <div className=" flex items-center w-full pb-3 px-[5%]">
         <Image
         src={'./assets/ExclusiveLogoBlack.svg'}
         width={118}
