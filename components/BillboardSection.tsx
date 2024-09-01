@@ -38,7 +38,7 @@ const BillboardSection = () => {
           </div>
         </div>
 
-        <button href='#' className='w-[11.9rem] h-[4rem] rounded-[0.25rem] mt-[2.7rem] bg-[#00FF66] flex justify-center items-center text-white'>Buy Now!</button>
+        <button className='w-[11.9rem] h-[4rem] rounded-[0.25rem] mt-[2.7rem] bg-[#00FF66] flex justify-center items-center text-white'>Buy Now!</button>
       </div>
     </div>
   );

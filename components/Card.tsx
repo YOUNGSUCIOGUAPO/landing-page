@@ -1,12 +1,16 @@
+"use client"
 import Image from 'next/image'
-import React from 'react'
 import fill_eye from '/public/assets/Fill Eye.svg'
+import React, { useRef, useState, useEffect } from 'react';
 
 
 import StarRating from './StarRating'
 import CardLikeButton from './CardLikeButton'
 
+
+
 const Card = ({product}) => {
+
   return (
     <div className='w-[270px] h-[350px] flex flex-col'>
       <div className='card-image mb-[16px] relative rounded-[4px]'>
@@ -19,7 +23,7 @@ const Card = ({product}) => {
           <Image src={fill_eye} width={34} height={34} alt='' />
         </div>
         <div className='image-container'>
-          <Image src={product.image} width='100%' height='100%' className='image' alt='' />
+          <Image src={product.image} width={190} height={180} className='image' alt='' />
         </div>
 
         {/* Hover Effect */}
@@ -31,7 +35,7 @@ const Card = ({product}) => {
       <div className='card-text'>
         <h2 className='card-title'>{product.title}</h2>
         <div className='card-pricing'>
-          <span className='price'>{product.price}</span>
+          <span className='price'>{`$${product.price}`}</span>
           <span className='old-price'>{product.oldPrice}</span>
         </div>
         <div className='flex'>

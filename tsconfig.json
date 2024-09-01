@@ -20,14 +20,17 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "paths": {
+      "@/*": ["./*"]  // Add this to tsconfig.json
+    }
   },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "next.config.ts"  ],
   "exclude": [
     "node_modules"
   ]

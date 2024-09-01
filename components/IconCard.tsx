@@ -6,7 +6,7 @@ import computer from '/public/assets/Computer-icon.svg'
 const IconCard = ({icon}) => {
   return (
     <div className='icon-card mr-[55px] mb-[70px]'>
-      <div className='icon-container icon'>
+      <div className='icon-container'>
         <Image
         src={icon.icon}
         width='3.5rem'

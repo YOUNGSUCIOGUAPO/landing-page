@@ -23,6 +23,7 @@ const ProductSection = () => {
   const carouselRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fade, setFade] = useState(false);
+
   const [products, setProducts] = useState([]);
 
   const cardsPerSet = 8; // 4 cards per row * 2 rows
@@ -49,28 +50,21 @@ const ProductSection = () => {
     }
   };
 
-  
+  const getProduct = async () => {
+    try {
+      const response = await fetch('https://fakestoreapi.com/products?limit=20');
+      const data = await response.json();
+      console.log(data);
+      setProducts(data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
+useEffect(() => {
+    getProduct();
+  }, [])
 
-  // useEffect(() => {
-  //   fetch('https://fakestoreapi.com/products?limit=12')
-  //           .then(res=>res.json())
-  //           .then(json=>console.log(json))
-  //           .then((json)=>setProducts(json))
-  // })
-
-  useEffect(() => {
-    fetch('https://fakestoreapi.com/products?limit=12')
-      .then(res => res.json())
-      .then(json => {
-        if (Array.isArray(json)) {
-          setProducts(json);
-        } else {
-          console.error('Unexpected data format', json);
-        }
-      })
-      .catch(error => console.error('Error fetching products:', error));
-  }, []);
 
 
 
@@ -109,9 +103,9 @@ const ProductSection = () => {
       <div className='relative'>
         <div ref={carouselRef} id='todayCarousel' className={`carousel flex scroll-smooth overflow-hidden px-[5%] ${fade ? 'fade' : ''}`}>
           <div className='grid grid-cols-4 gap-x-[4.5rem] gap-y-8 w-full transition-opacity duration-300 ease-in-out'>
-            {itemData.slice(currentIndex * cardsPerSet, (currentIndex + 1) * cardsPerSet).map((item, index) => (
-              <div key={index} className=' w-[270px]'>
-                <Card product={item} />
+            {products.slice(currentIndex * cardsPerSet, (currentIndex + 1) * cardsPerSet).map((product, id) => (
+              <div key={product.id} className=' w-[270px]'>
+                <Card product={product} />
               </div>
             ))}
           </div>
@@ -123,14 +117,6 @@ const ProductSection = () => {
         <button className='my-[60px] bg-[#DB4444] w-[234px] h-[56px] mb-[140px] rounded-[4px] text-white flex justify-center align-middle items-center'>
           View All Products
         </button>
-      </div>
-
-      <div className='grid grid-cols-4 gap-2 px-[5%] '>
-        {Array.isArray(products) && products.map((product) => (
-          <div key={product.id} className=' w-full'>
-          <Card product={product.id} />
-          </div>
-        ))}
       </div>
     </section>
   );
